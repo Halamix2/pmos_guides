@@ -6,9 +6,9 @@ topics for guides are in `what.md`, test dir contains some videos from camera fo
 `beamerthemepmos_modified.sty` is a modified verion of `beamerthemepmos.sty` from [artwork repository](https://gitlab.com/postmarketOS/artwork/tree/master/presentation/latex)
 
 ---
-##some converstions that might be useful for the videos and I don't want to lose:
+## some converstions that might be useful for the videos and I don't want to lose:
 
-###What is Halium and libhybris
+### What is Halium and libhybris
 
 by Alexeymin:
 
