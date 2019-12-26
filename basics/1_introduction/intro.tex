@@ -1,0 +1,147 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[utf8]{inputenc}
+\usetheme{pmos_modified}
+
+\title{postmarketOS}
+\subtitle{Introduction}
+\author{Piotr Halama}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{What are the problems with Android?}
+\begin{itemize}
+	\item Every port is a new fork of a system and kernel
+	\begin{itemize}
+		\item hard to update kernel
+		\item fixing one thing requires to change all affected repos
+		\item hacky solutions for hardware drivers
+	\end{itemize}
+	\item No updates after year or two
+	\item Rather bloated, requires many hardware resources
+	\item proprietary bits
+	\begin{itemize}
+		\item may contain bugs or backdoors, very hard to check
+		\item impossible to update
+		\item hard to replace
+		\item may work only with one specific kernel version
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{What is postmarketOS?}
+	\center \Large Linux distribution for smartphones
+	\center based on Alpine Linux
+\end{frame}	
+
+\begin{frame}{Goals of postmarketOS}
+\begin{itemize}
+	\item Few device-specific packages
+	\begin{itemize}
+		\item device package
+		\item downstream kernel package
+		\item firmware package
+	\end{itemize}
+	\item Porting mainline kernel to devices
+	\begin{itemize}
+		\item everything is standarized
+		\item easy to update
+		\item one kernel for many devices
+	\end{itemize}
+	\item 10 year life-cycle
+	\begin{itemize}
+		\item Device gets updates as long as it can handle them
+		\item some devices (e.g. Nokia N900) already passed 10 years and it's still supported
+	\end{itemize}
+%	\item Have fun
+%	\begin{itemize}
+%		\item You can work on anything you want
+%	\end{itemize}
+	\item Document everything
+%	\begin{itemize}
+%		%\item Have fun
+%		\item You can work on anything you want
+%		\item Note everything in wiki, it may come in handy
+%	\end{itemize}
+	
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pros}
+\begin{itemize}
+	\item Can run on devices stuck with Android 2.3.6
+	\item Faster builds than Android
+	\item pmbootstrap takes care of building enviroment
+	\begin{itemize}
+		\item building is done in chroots, no need to install additional stuff or worry about buildchain
+		%TODO is this really important ?
+		%\item smaller size, repo contains just build instructions and patches, heavy source code is downloaded per package if needed
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cons}
+\begin{itemize}
+	\item Still in early development
+	\begin{itemize}
+		\item calls don't work yet on most devices
+		\item many phones have only basic port with only screen and USB networking working 
+		\item upstream changes in Alpine can break already working pieces
+	\end{itemize}
+	\item Software selection is slim
+	\begin{itemize}
+		\item many programs are not optimized for touchscreen
+	\end{itemize}
+	\item Security is not top priority (for now)
+%	\begin{itemize}
+%		\item DEs may run as root
+%		\item No privilege separation
+%	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{We are not alone}
+\begin{itemize}
+	\item Desktop Enviroments
+	\begin{itemize}
+	\item KDE Plasma, XFCE, touch and keyboard/mouse optimized DE's
+	\end{itemize}
+	\item Halium and libhybris
+	\begin{itemize}
+		\item Android in a container and translation layer allows to run proprietary drivers
+	\end{itemize}
+	\item Other Linux distros for smart devices
+	\begin{itemize}
+	\item AsteroidOS
+	\item LuneOS
+	\item Maemo Leste
+	\item Sailfish OS
+	\item SHR
+	\item UBports
+	\end{itemize}
+	\item Hardware makers
+	\begin{itemize}
+		\item Librem 5
+		\item PinePhone and PineTab
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}%Raw numbers?}
+	\center \Large Thanks for watching!
+\end{frame}
+
+%TODO remove this in production!
+\begin{frame}{To do in voiceover only (and captions)}
+\begin{itemize}
+\item "Document everything" -  mention wiki, GH/GL issues, knowledge exchange with others
+	\item "work on anything you want" - basically have fun
+	\item "in early development" - rather for hackers and tinkerers
+	\item version based on stable Alpine is coming
+	\item libre drivers
+\end{itemize}
+\end{frame}
+
+\end{document}
